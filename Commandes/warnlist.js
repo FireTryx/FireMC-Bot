@@ -35,15 +35,15 @@ module.exports = {
                 }
                 
                 let Embed = new Discord.EmbedBuilder()
-                .setColor(bot.color)
-                .setTitle(`Warns de ${user}`)
-                .setThumbnail(user.displayAvatarURL({dynamic: true}))
-                .setTimestamp()
-                .setFooter({text: "Warns"})
+                    .setColor(bot.color)
+                    .setTitle(`Warn(s) de ${user.tag}`)
+                    .setThumbnail(user.displayAvatarURL({dynamic: true}))
+                    .setTimestamp()
+                    .setFooter({text: "Warns"})
 
                 for(let i = 0; i < req.length; i++) {
                     
-                    Embed.addFields([{name: `Warn n°${i+1}`, value: `> **Modérateur** : ${(await bot.users.fetch(req[i].author)).user}\n> **ID Utilisateur** : ${user.id}\n> **ID** : \`${req[i].warn}\`\n> **Raison** : \`${req[i].reason}\`\n> **Date** <t:${Math.floor(parseInt(req[i].date / 1000))}>`}])
+                    Embed.addFields([{name: `Warn n°${i+1}`, value: `> **Modérateur** : ${(await bot.users.fetch(req[i].author))}\n> **ID Utilisateur** : ${user.id}\n> **ID** : \`${req[i].warn}\`\n> **Raison** : \`${req[i].reason}\`\n> **Date** <t:${Math.floor(parseInt(req[i].date / 1000))}>`}])
                 }
 
             await message.reply({embeds: [Embed]})

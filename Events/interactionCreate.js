@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 const { EmbedBuilder, TextInputBuilder, ModalBuilder, ActionRowBuilder, TextInputStyle } = require("discord.js")
 const votedMembers = new Set();
 const transcript = require("discord-html-transcripts");
-const ownerId = ["850027307401740350"];
+const ownerId = ["850027307401740350", "891332897787756574"];
 
 module.exports = async (bot, interaction, message, db) => {
 

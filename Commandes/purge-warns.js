@@ -3,7 +3,7 @@ const ms = require("ms")
 module.exports = {
 
     name: "purge-warns",
-    description: "Purger la table Giveaways de la base de données et supprimer tous les giveaways existants",
+    description: "Purger la table WARNS de la base de données et supprimer tous les warns existants",
     permission: Discord.PermissionFlagsBits.Administrator,
     ownerOnly: true,
     dm: false,
